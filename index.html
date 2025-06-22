@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="todoContainer">
+        <h1 id="title">D Planner</h1>
+
+        <div class="takingInput">
+  <input type="text" placeholder="Enter your task" class="inputTask">
+  <label for="deadlineInput" class="inlineLabel">Deadline (hh:mm)</label>
+  <input type="time" id="deadlineInput" class="deadlineInput">
+
+  <button id="addTask">Add Task</button>
+</div>
+
+
+        <h2>Pending Tasks</h2>
+        <ul id="pendingTasks"></ul>
+
+        <h2>Completed Tasks</h2>
+        <ul id="completedTasks"></ul>
+
+        <h2>Today's Summary</h2>
+        <div id="summaryPanel">
+        <div class="summaryBox">
+            <p>Total Tasks: <span id="totalTasks">0</span></p>
+            <p>Completed: <span id="completedCount">0</span></p>
+            <p>Pending: <span id="pendingCount">0</span></p>
+        </div>
+        <canvas id="summaryChart" width="200" height="200"></canvas>
+        </div>
+        </div>
+    </div>
+<div id="toast" class="toast hidden">
+  <span id="toastMessage"></span>
+  <button id="toastBtn">Mark as Done</button>
+  <button id="toastSkipBtn">❌ Not Done Yet</button>
+</div>
+
+<audio id="alertSound" src="audio.mp3" preload="auto"></audio>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html> 
